@@ -41,10 +41,33 @@ Car.prototype.render = function () {
     tableDatatxt.textContent = `Car name: ${this.name} Model Year: ${this.year}`;
     tableRow.appendChild(tableDatatxt);
 
+    var deleteBtn = document.createElement('button');
+    deleteBtn.textContent = 'X';
+    deleteBtn.addEventListener('click', deleteRow);
+    tableRow.appendChild(deleteBtn);
+
+
     table.appendChild(tableRow);
 
 }
+// remove the row the object from the local storage
+function deleteRow(event) {
+    var row = event.target.parentElement;
+    // console.log(row.innerHTML.split('<td>')[2].split(' ')[2]);
+    row.remove();
+    var carObj = JSON.parse(localStorage.getItem('cars'));
 
+    for (let index = 0; index < carObj.length; index++) {
+        // console.log(carObj[index].name);
+        if (row.innerHTML.split('<td>')[2].split(' ')[2] == carObj[index].name) {
+            console.log(row.innerHTML.split('<td>')[2].split(' ')[2] == carObj[index].name);
+            carObj.splice(index, 1);
+            localStorage.setItem('cars', JSON.stringify(carObj));
+
+        }
+
+    }
+}
 
 
 // ==========
