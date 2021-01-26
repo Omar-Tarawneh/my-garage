@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70px;
+    background-color: #4a4a4a;
+    color: white;
+}
+
+body{
+    background-image: url('background.jpg');
+}
+
+
+.parent{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: white;
+    margin-top: 10rem;
+}
+
+form{
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-gap: 20px;
+}
