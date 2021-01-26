@@ -28,7 +28,6 @@ Car.prototype.render = function () {
     for (let index = 0; index < cars.length; index++) {
         if (this.model == cars[index].split('.')[0]) {
             path = `img/${cars[index]}`
-            console.log(path);
         }
     }
 

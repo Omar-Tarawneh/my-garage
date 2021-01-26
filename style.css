@@ -2,6 +2,7 @@
     margin: 0;
     padding:0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -27,13 +28,33 @@ body{
 }
 
 form{
+    position: relative;
     display: grid;
     grid-template-columns: 100px 1fr;
     grid-gap: 20px;
+    color: white;
 }
+form input[type=submit]{
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-top: 20px;
+    width: 4rem;
+
+}
+
+table{
+    background-color: white ;
+    color: black
+}
+
 
 table img {
-    height: 7rem;
-    width: 7rem;
+    height: 3rem;
+    width: 5rem;
 }
-
+table td {
+    padding: 3px 10px 10px 10px;
+}
