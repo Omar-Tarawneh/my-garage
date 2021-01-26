@@ -31,3 +31,9 @@ form{
     grid-template-columns: 100px 1fr;
     grid-gap: 20px;
 }
+
+table img {
+    height: 7rem;
+    width: 7rem;
+}
+
