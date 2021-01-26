@@ -7,6 +7,7 @@ var carObjects = [];
 
 const form = document.getElementById('car-form');
 const table = document.getElementById('car-table');
+const clear = document.getElementById('clear');
 
 
 // =========
@@ -96,9 +97,17 @@ function restorData() {
     }
 }
 
+function clearData(event) {
+    table.innerHTML = '';
+    localStorage.clear();
+
+
+}
+
 
 // ===========
 // calling and event listeners
 // ==========
 form.addEventListener('submit', carData);
+clear.addEventListener('click', clearData)
 restorData();
